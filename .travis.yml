@@ -1,0 +1,30 @@
+language: generic
+
+matrix:
+  include:
+    - os: linux
+      dist: trusty
+      sudo: false
+      env: COMPENV=GCC
+    - os: linux
+      dist: trusty
+      sudo: true
+      env: COMPENV=Intel
+    - os: osx
+      env: COMPENV=GCC
+    - os: osx
+      env: COMPENV=Intel
+
+addons:
+  apt:
+    packages:
+    - gfortran
+
+before_install:
+  - source .travis/setup_compilers.sh
+
+install:
+  - mkdir build && cd build
+  - cmake -DCMAKE_BUILD_TYPE=Debug ..
+
+script: cmake --build . -- -j2
