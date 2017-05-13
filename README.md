@@ -1,5 +1,8 @@
 # EnergyPlusFortran
 
+[![Build status](https://ci.appveyor.com/api/projects/status/8r2m9y8rr8tu9omc?svg=true)](https://ci.appveyor.com/project/dmey/energyplusfortran)
+[![Build Status](https://travis-ci.org/dmey/EnergyPlusFortran.svg?branch=master)](https://travis-ci.org/dmey/EnergyPlusFortran)
+
 This repository is a fork of [NREL's EnergyPlusRelease Fortran version 8.1.0.009](https://github.com/NREL/EnergyPlusRelease/tree/1ba8474958dbac5a371362731b23310d40e0635d).
 Some of the missing files which could not be located in the original repository above, were added from the [nrgsim EnergyPlus-Fortran repository](https://github.com/nrgsim/EnergyPlus-Fortran/tree/ba8b3c6e053f02055ee83cff6218b800b7304635) and [SQLite](https://sqlite.org/download.html).
 
