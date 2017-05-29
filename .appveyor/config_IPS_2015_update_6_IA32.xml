@@ -1,0 +1,17 @@
+<config>
+    <handler id="common">
+        <property name="components" value="ICSXE_DOCS,ism,SUITE_COMMON,SUITE_DOCS,OPENMP_IA32,F_DOCS,CMP_ARCH_COMMON,CMP_IA32,F_IA32_REDIST_PKG,F_ARCH_COMMON,F_IA32,IDE_UTILITIES_VS2010,IDE_UTILITIES_VS2012,IDE_UTILITIES_VS2013,IDE_UTILITIES_VS2015,IDE_COMMON_VS2010,IDE_COMMON_VS2012,IDE_COMMON_VS2013,IDE_COMMON_VS2015,IDE_F_VS2010,IDE_F_VS2012,IDE_F_VS2013,IDE_F_VS2015,DOC_VS_VS2010,DOC_VS_VS2012,DOC_VS_VS2013,DOC_VS_VS2015" />
+        <property name="installdir" value="C:\Program Files (x86)\Intel" />
+        <property name="eula" value="accept" />
+        <property name="activation_type" value="serial_number" />
+        <property name="sn" value="__serial_number__" />
+        <property name="license" value="" />
+        <property name="send_data" value="no" />
+    </handler>
+    <handler id="vs_integration">
+        <property name="vs_2010" value="true" />
+        <property name="vs_2012" value="true" />
+        <property name="vs_2013" value="true" />
+        <property name="vs_2015" value="true" />
+    </handler>
+</config>

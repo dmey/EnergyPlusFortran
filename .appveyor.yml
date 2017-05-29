@@ -1,0 +1,41 @@
+# Refs:https://github.com/appveyor/ci/issues/1276
+#      https://software.intel.com/en-us/forums/intel-c-compiler/topic/594797
+#      https://software.intel.com/en-us/articles/intel-compilers-for-windows-silent-installation-guides
+
+environment:
+  secure_serial_number:
+    secure: Vx00HBLNHEF90wKzPxPgbg==
+
+  matrix:
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2013
+      URL: http://registrationcenter-download.intel.com/akdlm/irc_nas/tec/8462/parallel_studio_xe_2015_update6_online_setup.exe
+      CONFIG_FILE: config_IPS_2015_update_6_IA32.xml
+      IPS_PATH: C:\Program Files (x86)\Intel\Composer XE 2015\bin\ipsxe-comp-vars.bat
+      PLATFORM: ia32
+      IPS_VS: vs2013
+      GENERATOR: Visual Studio 12 2013
+
+    - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+      URL: http://registrationcenter-download.intel.com/akdlm/irc_nas/tec/11305/parallel_studio_xe_2017_update2_cluster_edition_online_setup.exe
+      CONFIG_FILE: config_IPS_2017_update_2_x64.xml
+      IPS_PATH: C:\Program Files (x86)\IntelSWTools\compilers_and_libraries_2017.2.187\windows\bin\ipsxe-comp-vars.bat
+      IPS_VS: vs2015
+      PLATFORM: intel64
+      GENERATOR: Visual Studio 14 2015 Win64
+
+
+install:
+  - ps: If (!$Env:secure_serial_number) {echo "Building is not supported in pull requests"; exit 0}
+  - ps: Invoke-WebRequest $Env:URL -OutFile setup.exe
+  - ps: $CWD = Get-Location
+  - ps: $TMP_CONFIG_FILE = "$CWD\.appveyor\$Env:CONFIG_FILE"
+  - ps: (Get-Content $TMP_CONFIG_FILE -Raw).Replace('__serial_number__', $Env:secure_serial_number) | Set-Content $TMP_CONFIG_FILE
+  - powershell -Command "$CWD = Get-Location; &.\setup.exe install --silent=$CWD\.appveyor\$Env:CONFIG_FILE --output=install.log | Out-Null; (cat .\install.log) -replace $Env:secure_serial_number, '***'"
+
+build_script:
+  - call "%IPS_PATH%" %PLATFORM% %IPS_VS%
+  - mkdir build && cd build
+  - cmake -DCMAKE_BUILD_TYPE=Debug -G "%GENERATOR%" ..
+
+test_script:
+  - cmake --build .
