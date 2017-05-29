@@ -25,6 +25,7 @@ environment:
 
 
 install:
+  - ps: If (!$Env:secure_serial_number) {echo "Building is not supported in pull requests"; exit 0}
   - ps: Invoke-WebRequest $Env:URL -OutFile setup.exe
   - ps: $CWD = Get-Location
   - ps: $TMP_CONFIG_FILE = "$CWD\.appveyor\$Env:CONFIG_FILE"
