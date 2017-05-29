@@ -21,7 +21,7 @@ addons:
     - gfortran
 
 before_install:
-  - source .travis/setup_compilers.sh
+  - travis_wait source .travis/setup_compilers.sh
 
 install:
   - mkdir build && cd build
