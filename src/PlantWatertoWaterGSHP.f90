@@ -74,7 +74,7 @@ TYPE GshpSpecs
   REAL(r64)          :: CompPistonDisp          = 0.0d0 ! compressor piston displacement m3
   REAL(r64)          :: CompClearanceFactor     = 0.0d0 ! compressor clearance factor
   REAL(r64)          :: CompSucPressDrop        = 0.0d0 ! deltap ,  compressor suction and discharge pressure drop Pascals
-  REAL(r64)          :: SuperheatTemp           = 0.0d0 ! deltatsh , super heating  캜
+  REAL(r64)          :: SuperheatTemp           = 0.0d0 ! deltatsh , super heating  째C
   REAL(r64)          :: PowerLosses             = 0.0d0 ! constant part of electro mechanical power losses  watts Joules/sec
   REAL(r64)          :: LossFactor              = 0.0d0 ! loss factor used ot define the electro mechanical
                                                       ! loss that is supposed to be proportional to the theoretical power
@@ -105,10 +105,10 @@ TYPE ReportVars
   REAL(r64)    :: QLoadEnergy                        = 0.0d0 ! Load Side heat transfer Joules
   REAL(r64)    :: QSource                            = 0.0d0 ! Source Side heat transfer rate Watts
   REAL(r64)    :: QSourceEnergy                      = 0.0d0 ! Source Side heat transfer Joules
-  REAL(r64)    :: LoadSideWaterInletTemp             = 0.0d0 ! Load Side outlet temperature 캜
-  REAL(r64)    :: SourceSideWaterInletTemp           = 0.0d0 ! Source Side outlet temperature 캜
-  REAL(r64)    :: LoadSideWaterOutletTemp            = 0.0d0 ! Load Side outlet temperature 캜
-  REAL(r64)    :: SourceSideWaterOutletTemp          = 0.0d0 ! Source Side outlet temperature 캜
+  REAL(r64)    :: LoadSideWaterInletTemp             = 0.0d0 ! Load Side outlet temperature 째C
+  REAL(r64)    :: SourceSideWaterInletTemp           = 0.0d0 ! Source Side outlet temperature 째C
+  REAL(r64)    :: LoadSideWaterOutletTemp            = 0.0d0 ! Load Side outlet temperature 째C
+  REAL(r64)    :: SourceSideWaterOutletTemp          = 0.0d0 ! Source Side outlet temperature 째C
   REAL(r64)    :: LoadSidemdot                       = 0.0d0 ! Mass flow rate of the cooling water in Load Side Kg/s
   REAL(r64)    :: SourceSidemdot                     = 0.0d0 ! Mass flow rate of chilled water in Eavporator Kg/s
   INTEGER   :: Running                             = 0   ! On reporting Flag
@@ -129,10 +129,10 @@ END TYPE ReportVars
   REAL(r64)       :: Power                         = 0.0d0 ! power consumption Watts Joules/sec
   REAL(r64)       :: QLoad                         = 0.0d0 ! heat rejection from Load Side coil Joules
   REAL(r64)       :: QSource                       = 0.0d0 ! cooling capacity Joules
-  REAL(r64)       :: SourceSideWaterOutletTemp     = 0.0d0 ! Source Side outlet temperature 캜
-  REAL(r64)       :: SourceSideWaterInletTemp      = 0.0d0 ! Source Side outlet temperature 캜
-  REAL(r64)       :: LoadSideWaterOutletTemp       = 0.0d0 ! Source Side outlet temperature 캜
-  REAL(r64)       :: LoadSideWaterInletTemp        = 0.0d0 ! Source Side outlet temperature 캜
+  REAL(r64)       :: SourceSideWaterOutletTemp     = 0.0d0 ! Source Side outlet temperature 째C
+  REAL(r64)       :: SourceSideWaterInletTemp      = 0.0d0 ! Source Side outlet temperature 째C
+  REAL(r64)       :: LoadSideWaterOutletTemp       = 0.0d0 ! Source Side outlet temperature 째C
+  REAL(r64)       :: LoadSideWaterInletTemp        = 0.0d0 ! Source Side outlet temperature 째C
   LOGICAL, ALLOCATABLE, DIMENSION(:) :: CheckEquipName
 
 
@@ -691,19 +691,19 @@ SUBROUTINE CalcGshpModel( GSHPType, GSHPName, GSHPNum, MyLoad,FirstHVACIteration
           ! SUBROUTINE LOCAL VARIABLE DECLARATIONS:
   REAL(r64)              :: SourceSideEffect         ! Source Side effectiveness
   REAL(r64)              :: LoadSideEffect           ! Load Side effectiveness
-  REAL(r64)              :: SourceSideTemp           ! Source Side temperature 캜
-  REAL(r64)              :: LoadSideTemp             ! Load Side temperature 캜
+  REAL(r64)              :: SourceSideTemp           ! Source Side temperature 째C
+  REAL(r64)              :: LoadSideTemp             ! Load Side temperature 째C
   REAL(r64)              :: SourceSideUA             ! Source Side heat transfer coefficient    w/k
   REAL(r64)              :: LoadSideUA               ! Load Side heat transfer coefficient W/k
   REAL(r64)              :: SourceSidePressure       ! Source Side pressure Pascals
   REAL(r64)              :: LoadSidePressure         ! Load Side pressure Pascals
   REAL(r64)              :: SuctionPr                ! Suction Pressure  pascals
   REAL(r64)              :: DischargePr              ! Discharge Pressure pascals
-  REAL(r64)              :: CompressInletTemp        ! Compressor inlet temperature  캜
-  REAL(r64)              :: PressureDrop             ! Suction Pressure drop 캜
+  REAL(r64)              :: CompressInletTemp        ! Compressor inlet temperature  째C
+  REAL(r64)              :: PressureDrop             ! Suction Pressure drop 째C
   REAL(r64)              :: ClearanceFactor          ! Clearance factor
   REAL(r64)              :: PistonDisp               ! Compressor piston displacement  m3
-  REAL(r64)              :: ShTemp                   ! Superheat temperature 캜
+  REAL(r64)              :: ShTemp                   ! Superheat temperature 째C
   REAL(r64)              :: LosFac                   ! Loss factor used to define the electromechanical loss for compressor
   REAL(r64)              :: MassRef                  ! mass flow rate of refrigerant Kg/s
   REAL(r64)              :: SourceSideOutletEnth     ! Enthalpy at Source Side pressure Joules
@@ -1225,10 +1225,10 @@ TYPE ReportVars
   REAL(r64)    :: QLoadEnergy                 = 0.0d0 ! Load Side heat transfer Joules
   REAL(r64)    :: QSource                     = 0.0d0 ! Source Side heat transfer rate Watts
   REAL(r64)    :: QSourceEnergy               = 0.0d0 ! Source Side heat transfer Joules
-  REAL(r64)    :: LoadSideWaterInletTemp      = 0.0d0 ! Load Side outlet temperature 캜
-  REAL(r64)    :: SourceSideWaterInletTemp    = 0.0d0 ! Source Side outlet temperature 캜
-  REAL(r64)    :: LoadSideWaterOutletTemp     = 0.0d0 ! Load Side outlet temperature 캜
-  REAL(r64)    :: SourceSideWaterOutletTemp   = 0.0d0 ! Source Side outlet temperature 캜
+  REAL(r64)    :: LoadSideWaterInletTemp      = 0.0d0 ! Load Side outlet temperature 째C
+  REAL(r64)    :: SourceSideWaterInletTemp    = 0.0d0 ! Source Side outlet temperature 째C
+  REAL(r64)    :: LoadSideWaterOutletTemp     = 0.0d0 ! Load Side outlet temperature 째C
+  REAL(r64)    :: SourceSideWaterOutletTemp   = 0.0d0 ! Source Side outlet temperature 째C
   REAL(r64)    :: LoadSidemdot                = 0.0d0 ! Mass flow rate of the cooling water in Load Side kg/s
   REAL(r64)    :: SourceSidemdot              = 0.0d0 ! Mass flow rate of chilled water in Eavporator kg/s
   INTEGER :: Running                       = 0   ! On reporting Flag
@@ -1249,10 +1249,10 @@ LOGICAL, ALLOCATABLE, DIMENSION(:) :: CheckEquipName
     REAL(r64)   :: Power                         = 0.0d0 ! power consumption Watts
     REAL(r64)   :: QLoad                         = 0.0d0 ! heat rejection from Load Side coil Watts
     REAL(r64)   :: QSource                       = 0.0d0 ! cooling capacity Watts
-    REAL(r64)   :: SourceSideWaterOutletTemp     = 0.0d0 ! Source Side outlet temperature 캜
-    REAL(r64)   :: SourceSideWaterInletTemp      = 0.0d0 ! Source Side outlet temperature 캜
-    REAL(r64)   :: LoadSideWaterOutletTemp       = 0.0d0 ! Source Side outlet temperature 캜
-    REAL(r64)   :: LoadSidewaterInletTemp        = 0.0d0 ! Source Side outlet temperature 캜
+    REAL(r64)   :: SourceSideWaterOutletTemp     = 0.0d0 ! Source Side outlet temperature 째C
+    REAL(r64)   :: SourceSideWaterInletTemp      = 0.0d0 ! Source Side outlet temperature 째C
+    REAL(r64)   :: LoadSideWaterOutletTemp       = 0.0d0 ! Source Side outlet temperature 째C
+    REAL(r64)   :: LoadSidewaterInletTemp        = 0.0d0 ! Source Side outlet temperature 째C
 
 
 
@@ -2414,11 +2414,11 @@ TYPE ReportVars
   REAL(r64)    :: QSource                 = 0.0d0 ! Source Side Heat Transfer Rate [W]
   REAL(r64)    :: QSourceEnergy           = 0.0d0 ! Source Side Heat Transfer [J]
   REAL(r64)    :: LoadSideMassFlowRate    = 0.0d0 ! Load side volumetric flow rate m3/s
-  REAL(r64)    :: LoadSideInletTemp       = 0.0d0 ! Load Side outlet temperature 캜
-  REAL(r64)    :: LoadSideOutletTemp      = 0.0d0 ! Load Side outlet temperature 캜
+  REAL(r64)    :: LoadSideInletTemp       = 0.0d0 ! Load Side outlet temperature 째C
+  REAL(r64)    :: LoadSideOutletTemp      = 0.0d0 ! Load Side outlet temperature 째C
   REAL(r64)    :: SourceSideMassFlowRate  = 0.0d0 ! Source side volumetric flow rate m3/s
-  REAL(r64)    :: SourceSideInletTemp     = 0.0d0 ! Source Side outlet temperature 캜
-  REAL(r64)    :: SourceSideOutletTemp    = 0.0d0 ! Source Side outlet temperature 캜
+  REAL(r64)    :: SourceSideInletTemp     = 0.0d0 ! Source Side outlet temperature 째C
+  REAL(r64)    :: SourceSideOutletTemp    = 0.0d0 ! Source Side outlet temperature 째C
 END TYPE ReportVars
 
 TYPE (GSHPSpecs), ALLOCATABLE, DIMENSION(:)  ::GSHP
@@ -3574,7 +3574,7 @@ END MODULE HeatPumpWaterToWaterSimple
 
 !     NOTICE
 !
-!     Copyright � 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright 짤 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !

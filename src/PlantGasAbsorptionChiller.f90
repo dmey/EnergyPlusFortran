@@ -2135,7 +2135,7 @@ END SUBROUTINE UpdateGasAbsorberHeatRecords
 
 !                                 COPYRIGHT NOTICE
 !
-!     Portions Copyright © Gas Research Institute 2001.  All rights reserved.
+!     Portions Copyright Â© Gas Research Institute 2001.  All rights reserved.
 !
 !     GRI LEGAL NOTICE
 !     Neither GRI, members of GRI nor any person or organization acting on behalf
@@ -2155,7 +2155,7 @@ END SUBROUTINE UpdateGasAbsorberHeatRecords
 !
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !

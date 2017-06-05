@@ -15073,7 +15073,7 @@ END MODULE HVACUnitarySystem
 !
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of CalIFornia through Ernest OrlanDO Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !

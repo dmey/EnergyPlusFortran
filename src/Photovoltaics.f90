@@ -1463,7 +1463,7 @@ END SUBROUTINE CalcTRNSYSPV
 SUBROUTINE POWER(IO,IL,RSER,AA,EPS,II,VV,PP)
 
           ! SUBROUTINE INFORMATION:
-          !       AUTHOR         Ø. Ulleberg, IFE Norway for Hydrogems
+          !       AUTHOR         Ã˜. Ulleberg, IFE Norway for Hydrogems
           !       DATE WRITTEN   March 2001
           !       MODIFIED       D. Bradley for use with EnergyPlus
           !       RE-ENGINEERED  na
@@ -1519,7 +1519,7 @@ END SUBROUTINE POWER
 SUBROUTINE NEWTON(XX,FXX,DER,II,VV,IO,IL,RSER,AA,XS,EPS)
 
           ! SUBROUTINE INFORMATION:
-          !       AUTHOR         Ø. Ulleberg, IFE Norway for Hydrogems
+          !       AUTHOR         Ã˜. Ulleberg, IFE Norway for Hydrogems
           !       DATE WRITTEN   March 2001
           !       MODIFIED       D. Bradley for use with EnergyPlus
           !       RE-ENGINEERED  na
@@ -1574,7 +1574,7 @@ END SUBROUTINE NEWTON
 SUBROUTINE SEARCH(A,B,P,K,IO,IL,RSER,AA,EPS,KMAX)
 
           ! SUBROUTINE INFORMATION:
-          !       AUTHOR         Ø. Ulleberg, IFE Norway for Hydrogems
+          !       AUTHOR         Ã˜. Ulleberg, IFE Norway for Hydrogems
           !       DATE WRITTEN   March 2001
           !       MODIFIED       D. Bradley for use with EnergyPlus
           !       RE-ENGINEERED  na
@@ -1669,7 +1669,7 @@ SUBROUTINE SEARCH(A,B,P,K,IO,IL,RSER,AA,EPS,KMAX)
 REAL(r64) FUNCTION FUN(II,VV,IL,IO,RSER,AA)
 
           ! FUNCTION INFORMATION:
-          !       AUTHOR         Ø. Ulleberg, IFE Norway for Hydrogems
+          !       AUTHOR         Ã˜. Ulleberg, IFE Norway for Hydrogems
           !       DATE WRITTEN   March 2001
           !       MODIFIED       D. Bradley for EnergyPlus
           !       RE-ENGINEERED
@@ -1726,7 +1726,7 @@ END FUNCTION FUN
 REAL(r64) FUNCTION FI(II,VV,IO,RSER,AA)
 
           ! FUNCTION INFORMATION:
-          !       AUTHOR         Ø. Ulleberg, IFE Norway for Hydrogems
+          !       AUTHOR         Ã˜. Ulleberg, IFE Norway for Hydrogems
           !       DATE WRITTEN   March 2001
           !       MODIFIED       D. Bradley for EnergyPlus
           !       RE-ENGINEERED
@@ -1784,7 +1784,7 @@ END FUNCTION FI
 REAL(r64) FUNCTION FV(II,VV,IO,RSER,AA)
 
           ! FUNCTION INFORMATION:
-          !       AUTHOR         Ø. Ulleberg, IFE Norway for Hydrogems
+          !       AUTHOR         Ã˜. Ulleberg, IFE Norway for Hydrogems
           !       DATE WRITTEN   March 2001
           !       MODIFIED       D. Bradley for EnergyPlus
           !       RE-ENGINEERED
@@ -2708,7 +2708,7 @@ SUBROUTINE GetExtVentedCavityTsColl(VentModNum, TsColl)
 !
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !

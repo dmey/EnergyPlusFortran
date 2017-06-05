@@ -5144,7 +5144,7 @@ IMPLICIT NONE
           ! na
 
           ! SUBROUTINE PARAMETER DEFINITIONS:
-CHARACTER(len=1), PARAMETER :: degChar='°'
+CHARACTER(len=1), PARAMETER :: degChar='Â°'
 
 ! LineTypes for reading the stat file
 INTEGER, PARAMETER :: StatisticsLine=1
@@ -5265,9 +5265,9 @@ IF (fileExists) THEN
         coolingDesignlinepassed=.true.
         lineType=coolingConditionsLine
       endif
-    elseif (INDEX(lineIn,'(standard) heating degree-days (10°C baseline)') > 0) then
+    elseif (INDEX(lineIn,'(standard) heating degree-days (10Â°C baseline)') > 0) then
       lineType=stdHDDLine
-    elseif (INDEX(lineIn,'(standard) cooling degree-days (18.3°C baseline)') > 0) then
+    elseif (INDEX(lineIn,'(standard) cooling degree-days (18.3Â°C baseline)') > 0) then
       lineType=stdCDDLine
     elseif (INDEX(lineIn,'Maximum Dry Bulb') > 0) then
       lineType=maxDryBulbLine
@@ -5277,17 +5277,17 @@ IF (fileExists) THEN
       lineType=maxDewPointLine
     elseif (INDEX(lineIn,'Minimum Dew Point') > 0) then
       lineType=minDewPointLine
-    elseif (INDEX(lineIn,'(wthr file) heating degree-days (10°C baseline)') > 0 .or. &
-            INDEX(lineIn,'heating degree-days (10°C baseline)') > 0) then
+    elseif (INDEX(lineIn,'(wthr file) heating degree-days (10Â°C baseline)') > 0 .or. &
+            INDEX(lineIn,'heating degree-days (10Â°C baseline)') > 0) then
       lineType=wthHDDLine
-    elseif (INDEX(lineIn,'(wthr file) cooling degree-days (18°C baseline)') > 0 .or. &
-            INDEX(lineIn,'cooling degree-days (18°C baseline)') > 0) then
+    elseif (INDEX(lineIn,'(wthr file) cooling degree-days (18Â°C baseline)') > 0 .or. &
+            INDEX(lineIn,'cooling degree-days (18Â°C baseline)') > 0) then
       lineType=wthCDDLine
     endif
     ! these not part of big if/else because sequential
     if (lineType == KoppenDes1Line .and. isKoppen) lineType=KoppenDes2Line
     if (lineType == KoppenLine .and. isKoppen) lineType=KoppenDes1Line
-    if (INDEX(lineIn,'(Köppen classification)') > 0) lineType=KoppenLine
+    if (INDEX(lineIn,'(KÃ¶ppen classification)') > 0) lineType=KoppenLine
     if (lineType == AshStdDes2Line) lineType=AshStdDes3Line
     if (lineType == AshStdDes1Line) lineType=AshStdDes2Line
     if (lineType == AshStdLine) lineType=AshStdDes1Line
@@ -5298,7 +5298,7 @@ IF (fileExists) THEN
         CALL PreDefTableEntry(pdchWthrVal, 'Reference', lineIn(16:))
       CASE (LocationLine) ! Location -- SAN_FRANCISCO CA USA
         CALL PreDefTableEntry(pdchWthrVal, 'Site:Location', lineIn(12:))
-      CASE (LatLongLine) !      {N 37° 37'} {W 122° 22'} {GMT -8.0 Hours}
+      CASE (LatLongLine) !      {N 37Â° 37'} {W 122Â° 22'} {GMT -8.0 Hours}
         ! find the {}
         sposlt=INDEX(lineIn,'{')
         eposlt=INDEX(lineIn,'}')
@@ -5494,11 +5494,11 @@ IF (fileExists) THEN
             ENDIF
           END IF
         ENDIF
-      CASE (stdHDDLine) !  - 1745 annual (standard) heating degree-days (10°C baseline)
+      CASE (stdHDDLine) !  - 1745 annual (standard) heating degree-days (10Â°C baseline)
         storeASHRAEHDD=lineIn(3:6)
-      CASE (stdCDDLine) !  -  464 annual (standard) cooling degree-days (18.3°C baseline)
+      CASE (stdCDDLine) !  -  464 annual (standard) cooling degree-days (18.3Â°C baseline)
         storeASHRAECDD=lineIn(3:6)
-      CASE (maxDryBulbLine) !   - Maximum Dry Bulb temperature of  35.6°C on Jul  9
+      CASE (maxDryBulbLine) !   - Maximum Dry Bulb temperature of  35.6Â°C on Jul  9
         sposlt=INDEX(lineIn,'of')
         eposlt=INDEX(lineIn,'C')
         sposlt=sposlt+2
@@ -5522,7 +5522,7 @@ IF (fileExists) THEN
         else
           CALL PreDefTableEntry(pdchWthrVal, 'Maximum Dry Bulb Occurs on', 'not found')
         endif
-      CASE (minDryBulbLine) !   - Minimum Dry Bulb temperature of -22.8°C on Jan  7
+      CASE (minDryBulbLine) !   - Minimum Dry Bulb temperature of -22.8Â°C on Jan  7
         sposlt=INDEX(lineIn,'of')
         eposlt=INDEX(lineIn,'C')
         sposlt=sposlt+2
@@ -5546,7 +5546,7 @@ IF (fileExists) THEN
         else
           CALL PreDefTableEntry(pdchWthrVal, 'Minimum Dry Bulb Occurs on', 'not found')
         endif
-      CASE (maxDewPointLine) !   - Maximum Dew Point temperature of  25.6°C on Aug  4
+      CASE (maxDewPointLine) !   - Maximum Dew Point temperature of  25.6Â°C on Aug  4
         sposlt=INDEX(lineIn,'of')
         eposlt=INDEX(lineIn,'C')
         sposlt=sposlt+2
@@ -5570,7 +5570,7 @@ IF (fileExists) THEN
         else
           CALL PreDefTableEntry(pdchWthrVal, 'Maximum Dew Point Occurs on', 'not found')
         endif
-      CASE (minDewPointLine) !   - Minimum Dew Point temperature of -28.9°C on Dec 31
+      CASE (minDewPointLine) !   - Minimum Dew Point temperature of -28.9Â°C on Dec 31
         sposlt=INDEX(lineIn,'of')
         eposlt=INDEX(lineIn,'C')
         sposlt=sposlt+2
@@ -5594,88 +5594,88 @@ IF (fileExists) THEN
         else
           CALL PreDefTableEntry(pdchWthrVal, 'Minimum Dew Point Occurs on', 'not found')
         endif
-      CASE (wthHDDLine) !  - 1745 (wthr file) annual heating degree-days (10°C baseline)
+      CASE (wthHDDLine) !  - 1745 (wthr file) annual heating degree-days (10Â°C baseline)
         IF (storeASHRAEHDD /= ' ') THEN
           IF (unitsStyle .EQ. unitsStyleInchPound) THEN
-            curNameWithSIUnits = 'Standard Heating Degree-Days - base 50°(C)'
+            curNameWithSIUnits = 'Standard Heating Degree-Days - base 50Â°(C)'
             CALL LookupSItoIP(curNameWithSIUnits, indexUnitConv, curNameAndUnits)
             CALL PreDefTableEntry(pdchWthrVal, trim(curNameAndUnits),   &
                trim(RealToStr(ConvertIPDelta(indexUnitConv,StrToReal(storeASHRAEHDD)),1)))
           ELSE
-            CALL PreDefTableEntry(pdchWthrVal, 'Standard Heating Degree-Days (base 10°C)', storeASHRAEHDD)
+            CALL PreDefTableEntry(pdchWthrVal, 'Standard Heating Degree-Days (base 10Â°C)', storeASHRAEHDD)
           ENDIF
         ELSE
           IF (unitsStyle .EQ. unitsStyleInchPound) THEN
-            CALL PreDefTableEntry(pdchWthrVal, 'Standard Heating Degree-Days (base 50°F)', 'not found')
+            CALL PreDefTableEntry(pdchWthrVal, 'Standard Heating Degree-Days (base 50Â°F)', 'not found')
           ELSE
-            CALL PreDefTableEntry(pdchWthrVal, 'Standard Heating Degree-Days (base 10°C)', 'not found')
+            CALL PreDefTableEntry(pdchWthrVal, 'Standard Heating Degree-Days (base 10Â°C)', 'not found')
           ENDIF
         ENDIF
         IF (unitsStyle .EQ. unitsStyleInchPound) THEN
-          curNameWithSIUnits = 'Weather File Heating Degree-Days - base 50°(C)'
+          curNameWithSIUnits = 'Weather File Heating Degree-Days - base 50Â°(C)'
           CALL LookupSItoIP(curNameWithSIUnits, indexUnitConv, curNameAndUnits)
           CALL PreDefTableEntry(pdchWthrVal, trim(curNameAndUnits),   &
              trim(RealToStr(ConvertIPDelta(indexUnitConv,StrToReal(lineIn(3:6))),1)))
           CALL PreDefTableEntry(pdchLeedGenData, 'Heating Degree Days',   &
              trim(RealToStr(ConvertIPDelta(indexUnitConv,StrToReal(lineIn(3:6))),1)))
         ELSE
-          CALL PreDefTableEntry(pdchWthrVal, 'Weather File Heating Degree-Days (base 10°C)', lineIn(3:6))
+          CALL PreDefTableEntry(pdchWthrVal, 'Weather File Heating Degree-Days (base 10Â°C)', lineIn(3:6))
           CALL PreDefTableEntry(pdchLeedGenData, 'Heating Degree Days', lineIn(3:6))
         ENDIF
-      CASE (wthCDDLine) !  -  464 (wthr file) annual cooling degree-days (18°C baseline)
+      CASE (wthCDDLine) !  -  464 (wthr file) annual cooling degree-days (18Â°C baseline)
         IF (storeASHRAECDD /= ' ') THEN
           IF (unitsStyle .EQ. unitsStyleInchPound) THEN
-            curNameWithSIUnits = 'Standard Cooling Degree-Days - base 65°(C)'
+            curNameWithSIUnits = 'Standard Cooling Degree-Days - base 65Â°(C)'
             CALL LookupSItoIP(curNameWithSIUnits, indexUnitConv, curNameAndUnits)
             CALL PreDefTableEntry(pdchWthrVal, trim(curNameAndUnits),   &
                trim(RealToStr(ConvertIPDelta(indexUnitConv,StrToReal(storeASHRAECDD)),1)))
           ELSE
-            CALL PreDefTableEntry(pdchWthrVal, 'Standard Cooling Degree-Days (base 18.3°C)', storeASHRAECDD)
+            CALL PreDefTableEntry(pdchWthrVal, 'Standard Cooling Degree-Days (base 18.3Â°C)', storeASHRAECDD)
           ENDIF
         ELSE
           IF (unitsStyle .EQ. unitsStyleInchPound) THEN
-            CALL PreDefTableEntry(pdchWthrVal, 'Standard Cooling Degree-Days (base 65°F)', 'not found')
+            CALL PreDefTableEntry(pdchWthrVal, 'Standard Cooling Degree-Days (base 65Â°F)', 'not found')
           ELSE
-            CALL PreDefTableEntry(pdchWthrVal, 'Standard Cooling Degree-Days (base 18.3°C)', 'not found')
+            CALL PreDefTableEntry(pdchWthrVal, 'Standard Cooling Degree-Days (base 18.3Â°C)', 'not found')
           ENDIF
         ENDIF
         IF (unitsStyle .EQ. unitsStyleInchPound) THEN
-          curNameWithSIUnits = 'Weather File Cooling Degree-Days - base 64.4°(C)'
+          curNameWithSIUnits = 'Weather File Cooling Degree-Days - base 64.4Â°(C)'
           CALL LookupSItoIP(curNameWithSIUnits, indexUnitConv, curNameAndUnits)
           CALL PreDefTableEntry(pdchWthrVal, trim(curNameAndUnits),   &
              trim(RealToStr(ConvertIPDelta(indexUnitConv,StrToReal(lineIn(3:6))),1)))
           CALL PreDefTableEntry(pdchLeedGenData, 'Cooling Degree Days',   &
              trim(RealToStr(ConvertIPDelta(indexUnitConv,StrToReal(lineIn(3:6))),1)))
         ELSE
-          CALL PreDefTableEntry(pdchWthrVal, 'Weather File Cooling Degree-Days (base 18°C)', lineIn(3:6))
+          CALL PreDefTableEntry(pdchWthrVal, 'Weather File Cooling Degree-Days (base 18Â°C)', lineIn(3:6))
           CALL PreDefTableEntry(pdchLeedGenData, 'Cooling Degree Days',lineIn(3:6))
         ENDIF
-      CASE (KoppenLine) ! - Climate type "BSk" (Köppen classification)
+      CASE (KoppenLine) ! - Climate type "BSk" (KÃ¶ppen classification)
         IF (INDEX(lineIn,'not shown') == 0) THEN
           isKoppen=.true.
           IF (lineIn(19:19) .EQ. '"') THEN  ! two character classification
-            CALL PreDefTableEntry(pdchWthrVal, 'Köppen Classification', lineIn(17:18))
+            CALL PreDefTableEntry(pdchWthrVal, 'KÃ¶ppen Classification', lineIn(17:18))
           ELSE
-            CALL PreDefTableEntry(pdchWthrVal, 'Köppen Classification', lineIn(17:19))
+            CALL PreDefTableEntry(pdchWthrVal, 'KÃ¶ppen Classification', lineIn(17:19))
           END IF
         ELSE
           isKoppen=.false.
-          CALL PreDefTableEntry(pdchWthrVal, 'Köppen Recommendation', lineIn(3:))
+          CALL PreDefTableEntry(pdchWthrVal, 'KÃ¶ppen Recommendation', lineIn(3:))
         ENDIF
-      CASE (KoppenDes1Line) ! - Tropical monsoonal or tradewind-coastal (short dry season, lat. 5-25°)
+      CASE (KoppenDes1Line) ! - Tropical monsoonal or tradewind-coastal (short dry season, lat. 5-25Â°)
         IF (isKoppen) THEN
-          CALL PreDefTableEntry(pdchWthrVal, 'Köppen Description', lineIn(3:))
+          CALL PreDefTableEntry(pdchWthrVal, 'KÃ¶ppen Description', lineIn(3:))
         ENDIF
       CASE (KoppenDes2Line) ! - Unbearably humid periods in summer, but passive cooling is possible
         IF (isKoppen) THEN
           IF (LEN_TRIM(lineIn) .GT. 3) THEN ! avoid blank lines
             IF (lineIn(3:4) .NE. '**') THEN  ! avoid line with warning
-              CALL PreDefTableEntry(pdchWthrVal, 'Köppen Recommendation', lineIn(3:))
+              CALL PreDefTableEntry(pdchWthrVal, 'KÃ¶ppen Recommendation', lineIn(3:))
             ELSE
-              CALL PreDefTableEntry(pdchWthrVal, 'Köppen Recommendation', '')
+              CALL PreDefTableEntry(pdchWthrVal, 'KÃ¶ppen Recommendation', '')
             END IF
           ELSE
-            CALL PreDefTableEntry(pdchWthrVal, 'Köppen Recommendation', '')
+            CALL PreDefTableEntry(pdchWthrVal, 'KÃ¶ppen Recommendation', '')
           END IF
         ENDIF
       CASE (AshStdLine,AshStdDes1Line,AshStdDes2Line,AshStdDes3Line)
@@ -14282,7 +14282,7 @@ IMPLICIT NONE    ! Enforce explicit typing of all variables in this routine
 UnitConvSize = 94
 ALLOCATE(UnitConv(UnitConvSize))
 UnitConv(1)%siName = '%'
-UnitConv(2)%siName = '°C'
+UnitConv(2)%siName = 'Â°C'
 UnitConv(3)%siName = '0=OFF 1=ON'
 UnitConv(4)%siName = '0-NO  1-YES'
 UnitConv(5)%siName = '1-YES 0-NO'
@@ -15137,7 +15137,7 @@ END FUNCTION getSpecificUnitIndex
 
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of
 !     Berkeley National Laboratory.  All rights reserved.
 !
