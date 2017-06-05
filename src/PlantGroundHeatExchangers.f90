@@ -59,7 +59,7 @@ TYPE GlheSpecs
   REAL(r64)                     :: BoreholeRadius     =0.0d0
   REAL(r64)                     :: KGround            =0.0d0 ! Thermal conductivity of the ground        [W/(mK)]
   REAL(r64)                     :: CpRhoGround        =0.0d0 ! Specific heat capacity of ground      [J/Kg/K]
-  REAL(r64)                     :: TempGround         =0.0d0 ! The far feild temperature of the ground   [°C]
+  REAL(r64)                     :: TempGround         =0.0d0 ! The far field temperature of the ground   [°C]
   REAL(r64)                     :: DesignFlow         =0.0d0 ! Design volumetric flow rate               [m3/S]
   REAL(r64)                     :: DesignMassFlow     =0.0d0 ! Design mass flow rate                    [kg/S]
   REAL(r64)                     :: KGrout             =0.0d0 ! Grout thermal conductivity                [W/(mK)]

@@ -83,7 +83,7 @@ MODULE RefrigeratedCase
           ! for other loads upon the primary system. For cases and walk-ins served by cascade condensers, energy associated
           ! with hot gas defrost is reclaimed from the primary system.  The refrigeration load the cascade condenser
           ! places upon the primary system is the sum of all case and walk-in loads served by the secondary system plus
-          ! the sum of the secondary loop’s compressor power. The same name used to identify the condenser in the
+          ! the sum of the secondary loop's compressor power. The same name used to identify the condenser in the
           ! secondary loop is used to identify the cascade load on the primary system.
 
           ! Detailed transcritical CO2 refrigeration systems model each compressor individually using the manufacturer's
@@ -16305,7 +16305,7 @@ END SUBROUTINE ZeroHVACValues
 
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !

@@ -21,8 +21,8 @@ MODULE PipeHeatTransfer
   ! region is solved with a detailed finite difference grid, this current model makes use of
   ! the Hanby model to simulate the actual pipe.
 
-  ! Kusuda, T. & Achenbach, P. (1965), ‘Earth temperature and thermal diffusivity at
-  !     selected stations in the united states’, ASHRAE Transactions 71(1), 61-75.
+  ! Kusuda, T. & Achenbach, P. (1965), Earth temperature and thermal diffusivity at
+  !     selected stations in the united states, ASHRAE Transactions 71(1), 61-75.
   ! Piechowski, M. (1996), A Ground Coupled Heat Pump System with Energy Storage,
   !     PhD thesis, University of Melbourne.
 
@@ -2176,7 +2176,7 @@ REAL(r64) FUNCTION OutsidePipeHeatTransCoef(PipeHTNum)
                              !Nusselt for natural convection for horizontal cylinder
                              !from: Correlations for Convective Heat Transfer
                              !      Dr. Bernhard Spang
-                             !      Chemical Engineers’ Resource Page: http://www.cheresources.com/convection.pdf
+                             !      Chemical Engineers' Resource Page: http://www.cheresources.com/convection.pdf
   INTEGER, PARAMETER :: NumOfParamDivisions = 5       ! intervals in property correlation
   INTEGER, PARAMETER :: NumOfPropDivisions = 12       ! intervals in property correlation
 
@@ -2335,7 +2335,7 @@ End Function
 
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !
