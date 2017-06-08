@@ -120,11 +120,11 @@ MODULE DataPhotovoltaics      ! Data-Only Module for native EnergyPlus Photovolt
     REAL(r64)    :: BVoc0           =0.0D0 ! Temperature coefficient for module open-circuit-voltage at reference conditions
                                          !   (Volts/degC)
     REAL(r64)    :: mBVoc           =0.0D0 ! Coefficient for irradiance dependence of open-circuit-voltage-temperature
-                                         !  coefficient  (V/°C)
+                                         !  coefficient  (V/Â°C)
     REAL(r64)    :: BVmp0           =0.0D0 ! Temperature coefficient for module maximum-power-voltage at reference conditions
-                                         !   (V/°C)
+                                         !   (V/Â°C)
     REAL(r64)    :: mBVmp           =0.0D0 ! Cofficient for irradiance dependence of maximum-power-voltage-temperature
-                                         !   coefficient (V/°C)
+                                         !   coefficient (V/Â°C)
     REAL(r64)    :: DiodeFactor     =0.0D0 ! Empirically determined 'diode factor' for individual cells (unitless)
     REAL(r64)    :: c_2             =0.0D0 ! Empirical coefficients relating Vmp to Ee (unitless)
                                          !   (coefficient relating Vmp to irradiance)
@@ -141,7 +141,7 @@ MODULE DataPhotovoltaics      ! Data-Only Module for native EnergyPlus Photovolt
     REAL(r64)    :: b_3             =0.0D0 ! Empirical coefficients for f1(AOI) polynomial (unitless)
     REAL(r64)    :: b_4             =0.0D0 ! Empirical coefficients for f1(AOI) polynomial (unitless)
     REAL(r64)    :: b_5             =0.0D0 ! Empirical coefficients for f1(AOI) polynomial (unitless)
-    REAL(r64)    :: DT0             =0.0D0 ! Temperature difference between Tc and Tm at Eo (°C),
+    REAL(r64)    :: DT0             =0.0D0 ! Temperature difference between Tc and Tm at Eo (Â°C),
                                          ! (This is d(Tc) in Sandia database)
     REAL(r64)    :: fd              =0.0D0 ! Fraction of diffuse irradiance used by module (unitless)
     REAL(r64)    :: a               =0.0D0 ! Empirical coefficient for module temp.at low wind,
@@ -250,7 +250,7 @@ MODULE DataPhotovoltaics      ! Data-Only Module for native EnergyPlus Photovolt
 
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !

@@ -7401,9 +7401,9 @@ SUBROUTINE CalcIdealCondEntSetPoint(SetPtMgrNum)
 
 
           ! METHODOLOGY EMPLOYED:
-          ! The “ideal” chiller-tower optimization scheme uses a search algorithm to find the ideal optimal setpoint
+          ! The "ideal" chiller-tower optimization scheme uses a search algorithm to find the ideal optimal setpoint
           ! at a given timestep. This requires resimulating HVAC systems at each timestep until finding
-          ! an “optimal” condenser water entering setpoint (OptSetpoint) which gives the minimum total chiller,
+          ! an "optimal" condenser water entering setpoint (OptSetpoint) which gives the minimum total chiller,
           ! cooling tower, chilled water pump and condenser water pump power consumption.
           ! The OptSetpoint falls between realistic minimum and maximum boundaries, which are set by the user.
           ! The minimum boundary is determined based on the minimum lift (user input)
@@ -8529,7 +8529,7 @@ END SUBROUTINE CheckIFAnyIdealCondEntSetPoint
 
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !

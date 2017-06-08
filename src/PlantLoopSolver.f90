@@ -329,11 +329,11 @@ TYPE(m_FlowControlValidator) FUNCTION ValidateFlowControlPaths(LoopNum, LoopSide
 
           ! REFERENCES:
           ! "other types" of components: basically not load-range based heat transfer components.  This would include:
-          !    • demand based components such as coils
-          !    • component setpoint based operating components
-          !    • heat exchanger components including waterside economizers
+          !    - demand based components such as coils
+          !    - component setpoint based operating components
+          !    - heat exchanger components including waterside economizers
           ! "load-range based" components are heat transfer components which are controlled based on a single load range.
-          !    • currently only one load range based scheme is available at a given time, although other control types
+          !    - currently only one load range based scheme is available at a given time, although other control types
           !      may be enabled, such as component setpoint.
           ! Pumps are separate components since the pump heat is not accounted for in the flow path order.
           !  Improvements during the demand side rewrite has allowed pumps to be placed as -not- the first component on a branch
@@ -1753,12 +1753,12 @@ SUBROUTINE UpdateAnyLoopDemandAlterations(LoopNum, LoopSideNum, BranchNum, CompN
           ! METHODOLOGY EMPLOYED:
           ! Components will always supply a useful delta T, even if it happens to be zero
           ! For flow rate, make decisions based on the component's current operating scheme type:
-          !  • Demand based: these components will have a flow request on their inlet node
-          !  • Pump: these components will not be included, as they no longer include heat at the pump
-          !  • component setpoint: these components will have a flow request
+          !  - Demand based: these components will have a flow request on their inlet node
+          !  - Pump: these components will not be included, as they no longer include heat at the pump
+          !  - component setpoint: these components will have a flow request
 
           !    on their outlet node corresponding to their calculated delta T
-          !  • load range based: these components do not 'alter' the load, they reject the load
+          !  - load range based: these components do not 'alter' the load, they reject the load
           !    Therefore they are not included
 
 
@@ -3005,7 +3005,7 @@ END SUBROUTINE AdjustPumpFlowRequestByEMSControls
 
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !

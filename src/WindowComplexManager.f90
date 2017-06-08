@@ -3189,7 +3189,7 @@ SUBROUTINE CalcComplexWindowThermal(SurfNum,ConstrNum,HextConvCoeff,SurfInsideTe
                                 !                 1 - Scaled Cavity Width (SCW)
                                 !                 2 - Convective Scalar Model (CSM)
   INTEGER ::   Debug_mode = 0 ! Switch for debug output files:
-                              !                 0 - don�t create debug output files
+                              !                 0 - don't create debug output files
                               !                 1 - append results to existing debug output file (where applicable)
                               !                 2 - store results in a new debug output file
   CHARACTER(len=256) ::   Debug_dir = ' '  ! Target directory for debug files (pointer to a character array)
@@ -4326,7 +4326,7 @@ END SUBROUTINE PierceSurfaceVector
 
 !     NOTICE
 !
-!     Copyright  1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !

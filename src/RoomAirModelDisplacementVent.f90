@@ -528,7 +528,7 @@ SUBROUTINE CalcUCSDDV(ZoneNum)
           ! REFERENCES:
           ! Model developed by Paul Linden (UCSD), G. Carrilho da Graca (UCSD) and P. Haves (LBL).
           ! Work funded by the California Energy Comission. More information on the model can found in:
-          ! "Simplified Models for Heat Transfer in Rooms" G. Carrilho da Graça, Ph.D. thesis UCSD. December 2003.
+          ! "Simplified Models for Heat Transfer in Rooms" G. Carrilho da GraÃ§a, Ph.D. thesis UCSD. December 2003.
 
 
 
@@ -1103,7 +1103,7 @@ END SUBROUTINE CalcUCSDDV
 
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !

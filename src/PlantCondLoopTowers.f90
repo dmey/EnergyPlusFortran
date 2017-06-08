@@ -4824,7 +4824,7 @@ SUBROUTINE CalcVariableSpeedTower(TowerNum)
           ! ASHRAE Transactions 2002, V. 108, Pt. 1.
           !
           ! York International Corporation, "YORKcalcTM Software, Chiller-Plant Energy-Estimating Program",
-          ! Form 160.00-SG2 (0502). © 2002.
+          ! Form 160.00-SG2 (0502). Â© 2002.
 
           ! USE STATEMENTS:
   USE General,         ONLY: SolveRegulaFalsi
@@ -5355,7 +5355,7 @@ SUBROUTINE SimVariableTower(TowerNum, WaterFlowRateRatio, AirFlowRateRatio, Twb,
           ! ASHRAE Transactions 2002, V. 108, Pt. 1.
           !
           ! York International Corporation, "YORKcalcTM Software, Chiller-Plant Energy-Estimating Program",
-          ! Form 160.00-SG2 (0502). © 2002.
+          ! Form 160.00-SG2 (0502). Â© 2002.
 
           ! USE STATEMENTS:
           !
@@ -5441,7 +5441,7 @@ SUBROUTINE CalcVSTowerApproach(TowerNum, PctWaterFlow, AirFlowRatio, Twb, Tr, Ap
           ! ASHRAE Transactions 2002, V. 108, Pt. 1.
           !
           ! York International Corporation, "YORKcalcTM Software, Chiller-Plant Energy-Estimating Program",
-          ! Form 160.00-SG2 (0502). © 2002.
+          ! Form 160.00-SG2 (0502). Â© 2002.
 
           ! USE STATEMENTS:
           ! na
@@ -6437,7 +6437,7 @@ END SUBROUTINE ReportTowers
 
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !

@@ -59,7 +59,7 @@ TYPE GlheSpecs
   REAL(r64)                     :: BoreholeRadius     =0.0d0
   REAL(r64)                     :: KGround            =0.0d0 ! Thermal conductivity of the ground        [W/(mK)]
   REAL(r64)                     :: CpRhoGround        =0.0d0 ! Specific heat capacity of ground      [J/Kg/K]
-  REAL(r64)                     :: TempGround         =0.0d0 ! The far feild temperature of the ground   [캜]
+  REAL(r64)                     :: TempGround         =0.0d0 ! The far field temperature of the ground   [째C]
   REAL(r64)                     :: DesignFlow         =0.0d0 ! Design volumetric flow rate               [m3/S]
   REAL(r64)                     :: DesignMassFlow     =0.0d0 ! Design mass flow rate                    [kg/S]
   REAL(r64)                     :: KGrout             =0.0d0 ! Grout thermal conductivity                [W/(mK)]
@@ -88,11 +88,11 @@ END TYPE GlheSpecs
 
 
 TYPE ReportVars
-  REAL(r64)                     :: GlheBoreholeTemp   =0.0d0 ! [캜]
+  REAL(r64)                     :: GlheBoreholeTemp   =0.0d0 ! [째C]
   REAL(r64)                     :: GlheMassFlowRate   =0.0d0 ! [kg/s]
-  REAL(r64)                     :: GlheOutletTemp     =0.0d0 ! [캜]
-  REAL(r64)                     :: GlheInletTemp      =0.0d0 ! [캜]
-  REAL(r64)                     :: GlheAveFluidTemp   =0.0d0 ! [캜]
+  REAL(r64)                     :: GlheOutletTemp     =0.0d0 ! [째C]
+  REAL(r64)                     :: GlheInletTemp      =0.0d0 ! [째C]
+  REAL(r64)                     :: GlheAveFluidTemp   =0.0d0 ! [째C]
   REAL(r64)                     :: QGlhe              =0.0d0 ! [W] heat transfer rate
 END TYPE ReportVars
 
@@ -105,13 +105,13 @@ INTEGER, PARAMETER       :: MaxTSinHr   = 60   ! Max number of time step in a ho
 INTEGER                         :: NumVerticalGlhes=0
 INTEGER                         :: N               =1    ! COUNTER OF TIME STEP
 REAL(r64)                       :: CurrentSimTime  =0.0d0  ! Current simulation time in hours
-REAL(r64)                       :: GlheOutletTemp  =0.0d0  ! Outlet temperature of the fluid  [캜]
-REAL(r64)                       :: GlheInletTemp   =0.0d0  ! Inlet temperature of the fluid   [캜]
+REAL(r64)                       :: GlheOutletTemp  =0.0d0  ! Outlet temperature of the fluid  [째C]
+REAL(r64)                       :: GlheInletTemp   =0.0d0  ! Inlet temperature of the fluid   [째C]
 REAL(r64)                       :: GlheMassFlowRate=0.0d0  ! Mass flowrate of the fluid       [Kg/s]
 REAL(r64)                       :: QGlhe           =0.0d0  ! The normalised heat transfer rate[W/m]
 REAL(r64)                       :: GlheRB          =0.0d0  ! [K per W/m] Just for Analyis will be removed later
-REAL(r64)                       :: GlheAveFluidTemp=0.0d0  ! The average fluid temperature    [캜]
-REAL(r64)                       :: GlheBoreholeTemp=0.0d0  ! The average borehole tempreature [캜]
+REAL(r64)                       :: GlheAveFluidTemp=0.0d0  ! The average fluid temperature    [째C]
+REAL(r64)                       :: GlheBoreholeTemp=0.0d0  ! The average borehole tempreature [째C]
 INTEGER                         :: LocHourofDay    =0
 INTEGER                         :: LocDayofSim     =0
 REAL(r64),SAVE, ALLOCATABLE,DIMENSION(:):: LastQnSubHr   ! Previous time step Qn subhourly value
@@ -1417,7 +1417,7 @@ END SUBROUTINE UpdateVerticalGroundHeatExchanger
 
 !     NOTICE
 !
-!     Copyright � 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright 짤 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !

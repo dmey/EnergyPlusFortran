@@ -4,7 +4,7 @@
 
 environment:
   secure_serial_number:
-    secure: Vx00HBLNHEF90wKzPxPgbg==
+    secure: 7DOMLwaRCADFrDypeDITLA==
 
   matrix:
     - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2013

@@ -85,7 +85,7 @@ module TARCOGGassesParams
 
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !
@@ -384,7 +384,7 @@ module TARCOGGasses90
 
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !
@@ -540,7 +540,7 @@ module TARCOGParams
 
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !
@@ -910,7 +910,7 @@ module TARCOGCommon
 
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !
@@ -2294,7 +2294,7 @@ module TARCOGOutput
 
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !
@@ -2843,7 +2843,7 @@ module TARCOGArgs
 
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !
@@ -3105,7 +3105,7 @@ module TARCOGDeflection
 
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !
@@ -3847,7 +3847,7 @@ module TarcogShading
 
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !
@@ -4278,7 +4278,7 @@ module ThermalEN673Calc
 
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !
@@ -6780,7 +6780,7 @@ module ThermalISO15099Calc
 
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !
@@ -7279,13 +7279,13 @@ module TARCOGMain
     real(r64), dimension(maxlay), intent(in) ::  asol        ! Vector of Absorbed solar energy fractions for each layer
 
     !!! Venetians:
-    real(r64), dimension(maxlay), intent(in) ::  Atop        ! Vector with areas of top openings – between SD layers and top of
+    real(r64), dimension(maxlay), intent(in) ::  Atop        ! Vector with areas of top openings - between SD layers and top of
                                                              ! glazing cavity [m2]
-    real(r64), dimension(maxlay), intent(in) ::  Abot        ! Vector with areas of bottom openings – between SD layers and
+    real(r64), dimension(maxlay), intent(in) ::  Abot        ! Vector with areas of bottom openings - between SD layers and
                                                              ! bottom of glazing cavity [m2]
-    real(r64), dimension(maxlay), intent(in) ::  Al          ! Vector with areas of left-hand side openings – between SD layers and
+    real(r64), dimension(maxlay), intent(in) ::  Al          ! Vector with areas of left-hand side openings - between SD layers and
                                                              ! left end of glazing cavity [m2]
-    real(r64), dimension(maxlay), intent(in) ::  Ar          ! Vector of areas of right-hand side openings – between SD layers and
+    real(r64), dimension(maxlay), intent(in) ::  Ar          ! Vector of areas of right-hand side openings - between SD layers and
                                                              ! right end of glazing cavity [m2]
     real(r64), dimension(maxlay), intent(in) ::  Ah          ! Vector of total areas of holes for each SD [m2]
     real(r64), dimension(maxlay), intent(in) ::  SlatThick   ! Thickness of the slat material [m]
@@ -7301,14 +7301,14 @@ module TARCOGMain
 
     !!! Laminates:
     integer, dimension(maxlay), intent(in) :: nslice         ! Vector of numbers of slices in a laminated glazing layers
-                                                             ! (0 – monolithic layer)
+                                                             ! (0 - monolithic layer)
     real(r64), dimension(maxlay), intent(in) :: LaminateA    ! Left-hand side array for creating slice equations
     real(r64), dimension(maxlay), intent(in) :: LaminateB    ! Right-hand side array for creating slice equations
     real(r64), dimension(maxlay), intent(in) :: sumsol       ! Array of absorbed solar energy fractions for each laminated
                                                              ! glazing layer [W/m2]
 
     !!! Gaps:
-    integer, dimension(maxlay1, maxgas), intent(in) :: iprop  ! Matrix of gas codes – see mgas definition
+    integer, dimension(maxlay1, maxgas), intent(in) :: iprop  ! Matrix of gas codes - see mgas definition
     integer, dimension(maxlay1), intent(in) :: nmix           ! Vector of number of gasses in gas mixture of each gap
     real(r64), dimension(maxlay1, maxgas), intent(in) :: frct ! Matrix of mass percentages in gap mixtures
     real(r64), dimension(maxlay1), intent(in) :: presure      ! Vector of gas pressures in gaps [N/m2]
@@ -7329,8 +7329,8 @@ module TARCOGMain
 
     real(r64), intent(in) :: SDScalar  ! Factor of Venetian SD layer contribution to convection
                                        ! (used in conjunction with Thermal Model 2; otherwise, this value is ignored by TARCOG)
-                                       ! – real(r64) value between 0 (SD contribution to convection is neglected) and
-                                       !  1 (SD treated as “closed” – as if it is a glass layer with thermal
+                                       ! Â– real(r64) value between 0 (SD contribution to convection is neglected) and
+                                       !  1 (SD treated as Â“"closedÂ”" Â– as if it is a glass layer with thermal
                                        !  properties of SD slat material)
 
     !Deflection
@@ -7363,10 +7363,10 @@ module TARCOGMain
     real(r64), intent(out) :: ufactor    ! Center of glass U-value [W/m2 K]
     real(r64), intent(out) :: sc         ! Shading Coefficient
     real(r64), intent(out) :: hflux      ! Net heat flux between room and window [W/m2]
-    real(r64), intent(out) :: shgc       ! Solar heat gain coefficient – per ISO 15099
-    real(r64), intent(out) :: shgct      ! Solar heat gain coefficient – per old procedure
-    real(r64), intent(out) :: he         ! External heat transfer coefficient [W/m2 K] – EN673 and ISO 10292 procedure
-    real(r64), intent(out) :: hi         ! Internal heat transfer coefficient [W/m2 K] – EN673 and ISO 10292 procedure
+    real(r64), intent(out) :: shgc       ! Solar heat gain coefficient Â– per ISO 15099
+    real(r64), intent(out) :: shgct      ! Solar heat gain coefficient Â– per old procedure
+    real(r64), intent(out) :: he         ! External heat transfer coefficient [W/m2 K] Â– EN673 and ISO 10292 procedure
+    real(r64), intent(out) :: hi         ! Internal heat transfer coefficient [W/m2 K] Â– EN673 and ISO 10292 procedure
     real(r64), intent(out) :: hcin       ! Indoor convective surface heat transfer coefficient  [W/m2 K]
     real(r64), intent(out) :: hrin       ! Indoor radiative surface heat transfer coefficient [W/m2 K]
     real(r64), intent(out) :: hcout      ! Outdoor convective surface heat transfer coefficient [W/m2 K]
@@ -7393,11 +7393,11 @@ module TARCOGMain
     real(r64), dimension(maxlay1), intent(out) :: hcgas   ! Convective part of gap effective conductivity (including in and out)
     real(r64), dimension(maxlay1), intent(out) :: hrgas   ! Radiative part of gap effective conductivity (including in and out)
     real(r64), dimension(maxlay), intent(out) :: hg       ! Gas conductance of the glazing cavity [W/m2 K]
-                                                          !      – EN673 and ISO 10292 procedure
+                                                          !      - EN673 and ISO 10292 procedure
     real(r64), dimension(maxlay), intent(out) :: hr       ! Radiation conductance of the glazing cavity [W/m2 K]
-                                                          !      – EN673 and ISO 10292 procedure
+                                                          !      - EN673 and ISO 10292 procedure
     real(r64), dimension(maxlay), intent(out) :: hs       ! Thermal conductance of the glazing cavity [W/m2 K]
-                                                          !      – EN673 and ISO 10292 procedure
+                                                          !      - EN673 and ISO 10292 procedure
     real(r64), dimension(maxlay), intent(out) :: Ra       ! Vector of Rayleigh numbers, for each gap
     real(r64), dimension(maxlay), intent(out) :: Nu       ! Vector of Nusselt numbers, for each gap
 
@@ -7600,7 +7600,7 @@ module TARCOGMain
   end subroutine TARCOG90
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !

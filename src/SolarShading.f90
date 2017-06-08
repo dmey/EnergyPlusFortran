@@ -2346,7 +2346,7 @@ SUBROUTINE ComputeIntSolarAbsorpFactors
       CALL ShowWarningError('ComputeIntSolarAbsorpFactors: Solar distribution model is set to place solar gains '//  &
                'on the zone floor,')
       CALL ShowContinueError('...Zone="'//trim(Zone(ZoneNum)%Name)//'" has no floor, but has approximate horizontal surfaces.')
-      CALL ShowContinueError('...these Tilt > 120°, (area=['//trim(RoundSigDigits(HorizAreaSum,2))//'] m2) will be used.')
+      CALL ShowContinueError('...these Tilt > 120Â°, (area=['//trim(RoundSigDigits(HorizAreaSum,2))//'] m2) will be used.')
     ENDIF
 
           ! Compute ISABSF
@@ -11592,7 +11592,7 @@ end subroutine TimestepInitComplexFenestration
 
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !

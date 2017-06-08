@@ -883,7 +883,7 @@ SUBROUTINE UpdateSoilProps(Moisture,MeanRootMoisture,MoistureMax,MoistureResidua
 
   !NEXT redistribute the moisture in the soil based on:
   !Marcel G Schaap and Martinus Th van Genuchten, 2006, 'A modified Maulem-van
-  !Genuchten Formulation for Improved Description of the Hydraulic Conductivity Near Saturation’.
+  !Genuchten Formulation for Improved Description of the Hydraulic Conductivity Near Saturation.
   !Written in MATLAB by Vishal Sharma (of Portland State) and modified for FORTRAN by Stephen Forner Summer 2010
   !This model is based on curve fit data that describes the capillary motion of the water in combination with the gravitational
   !forces on the water.
@@ -1074,7 +1074,7 @@ END SUBROUTINE UpdateSoilProps
 
 !     NOTICE
 !
-!     Copyright © 1996-2013 The Board of Trustees of the University of Illinois
+!     Copyright Â© 1996-2013 The Board of Trustees of the University of Illinois
 !     and The Regents of the University of California through Ernest Orlando Lawrence
 !     Berkeley National Laboratory.  All rights reserved.
 !
