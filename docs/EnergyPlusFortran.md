@@ -1,9 +1,39 @@
-# EnergyPlusFortran
+---
+project: EnergyPlusFortran
+author: dmey (forked from NREL)
+version: 8.1.0.009
+summary: ![EnergyPlusFortran](|media|/eplus-logo.png)
+         {: style="text-align: center" }
+src_dir: ../src
+         ../external
+exclude_dir: DElight
+             ExternalInterface
+include: ../src
+         ../external/SQLite/src
+favicon: media/favicon.png
+media_dir: media
+output_dir: html
+extra_filetypes: c //
+predocmark: £
+docmark_alt: €
+predocmark_alt: ¥
+source: true
+graph: true
+coloured_edges: true
+preprocess: true
+md_extensions: markdown.extensions.toc
+print_creation_date: false
+display:  public
+          private
+          protected
+project_github: https://github.com/dmey/EnergyPlusFortran
+github: https://github.com/dmey/EnergyPlusFortran
+---
 
-[![Build status](https://ci.appveyor.com/api/projects/status/8r2m9y8rr8tu9omc?svg=true)](https://ci.appveyor.com/project/dmey/energyplusfortran)
-[![Build Status](https://travis-ci.org/dmey/EnergyPlusFortran.svg?branch=master)](https://travis-ci.org/dmey/EnergyPlusFortran)
+@note
+This is a reference documentation for the EnergyPlus™ program (version 8.1.0.009) written in Fortran using the CMake build system.
 
-This repository is a fork of [NREL's EnergyPlusRelease Fortran version 8.1.0.009](https://github.com/NREL/EnergyPlusRelease/tree/1ba8474958dbac5a371362731b23310d40e0635d).
+EnergyPlusFortran is a fork of [NREL's EnergyPlusRelease Fortran version 8.1.0.009](https://github.com/NREL/EnergyPlusRelease/tree/1ba8474958dbac5a371362731b23310d40e0635d).
 Some of the missing files which could not be located in the original repository above, were added from the [nrgsim EnergyPlus-Fortran repository](https://github.com/nrgsim/EnergyPlus-Fortran/tree/ba8b3c6e053f02055ee83cff6218b800b7304635) and [SQLite](https://sqlite.org/download.html).
 
 EnergyPlusFortran compiles the standalone EnergyPlus™ program `energyplus` plus a static library (`libenergyplus.a`) containing all public functions.
@@ -37,7 +67,3 @@ You may also need to specify the generator flag `-G` in CMake; for example, if y
 ### Additional Notes
 
 The instructions outlined above are for compiling EnergyPlus™ without the External Interface (`ExternalInterface.f90` was renamed `ExternalInterface.f90_off`).
-
-# EnergyPlusFortran reference documentation
-
-For the code browser please refer to the [EnergyPlusFortran reference documentation](https://dmey.github.io/EnergyPlusFortran).
