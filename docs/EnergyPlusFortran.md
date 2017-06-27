@@ -12,7 +12,7 @@ include: ../src
          ../external/SQLite/src
 favicon: media/favicon.png
 media_dir: media
-output_dir: html
+output_dir: ../build/docs/html
 extra_filetypes: c //
 predocmark: £
 docmark_alt: €

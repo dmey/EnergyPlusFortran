@@ -38,6 +38,6 @@ You may also need to specify the generator flag `-G` in CMake; for example, if y
 
 The instructions outlined above are for compiling EnergyPlus™ without the External Interface (`ExternalInterface.f90` was renamed `ExternalInterface.f90_off`).
 
-# EnergyPlusFortran Reference Documentation
+# Reference Documentation
 
-For browsing the entire EnergyPlusFortran code,please refer to the [EnergyPlusFortran reference documentation](https://dmey.github.io/EnergyPlusFortran-Reference).
+For browsing the entire EnergyPlusFortran reference documentation, please refer to the [EnergyPlusFortran reference documentation](https://dmey.github.io/EnergyPlusFortran-Reference).
